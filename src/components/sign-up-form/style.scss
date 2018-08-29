@@ -1,0 +1,18 @@
+.hidden {
+    margin-right: -9999px;
+}
+
+.generic-sign-up {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.sign-up-form input {
+    width: 70%;
+}
