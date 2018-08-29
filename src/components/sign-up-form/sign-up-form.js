@@ -47,7 +47,7 @@ class SignUpForm extends Component {
     render() {
         return (
             <section className="generic-sign-up">
-                <h1 className="hidden">Generic Sign-up Form</h1>
+                <h1>Sign Up</h1>
                 <form className="sign-up-form">
                     <label htmlFor="email">
                         Email:
