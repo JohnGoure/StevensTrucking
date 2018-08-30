@@ -1,0 +1,53 @@
+footer {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background: black;
+    color: White;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-flow: row wrap;
+    grid-row: 1;
+    margin: 10px 0 20px 40px;
+}
+
+.footer-nav a {
+    color: white;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    margin-top: 20px;
+}
+
+.footer-nav {
+    margin: 20px 30px 0px 40px;
+}
+
+.copywright {
+    grid-row: 2;
+    background-color: grey;
+    font-size: 19px;
+}
+
+.copywright a {
+    color: white;
+    transition: color .25s linear;
+}
+
+.copywright p {
+    margin: 10px 0px 0px 20px;
+}
+
+.copywright a:hover {
+    color: red;
+    transition: color .25s linear;
+}

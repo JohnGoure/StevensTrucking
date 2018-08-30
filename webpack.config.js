@@ -45,8 +45,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(["dist"]),
         new HtmlWebpackPlugin({
-            inject: false,
-            template: require('html-webpack-template'),
+            inject: true,
+            template: "index.html",
             appMountId: 'app'
         })
     ]

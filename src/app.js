@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import SignUpForm from './components/sign-up-form/sign-up-form';
+import Body from './components/body/body';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import './stylesheets/style.scss'
 
 class App extends Component {
     render() {
         return(
-            <SignUpForm />
+            <div>
+                <Header />
+                <Body />
+                <Footer />
+            </div>
         )
     }
 }

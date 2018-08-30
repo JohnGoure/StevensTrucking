@@ -1,0 +1,41 @@
+body {
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.dispatch-control {
+    display: flex;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 500px;
+}
+
+.dispatch-control h1 {
+    font-size: 40px;
+}
+
+table {
+    font-size: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+th:nth-child(1), td {
+    text-align: left;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+ color: blue;
+}
