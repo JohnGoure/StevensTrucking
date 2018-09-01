@@ -1,28 +1,12 @@
-import React from "react";
+import React from 'react';
+import Table from './table';
 
-const Body = () => {
+const Body = (props) => {
     return (
         <section className="dispatch-control">
-            <h1>Dispatch Control</h1>
+            <h1>DISPATCH CONTROL</h1>
             <article>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Well</th>
-                        <th>Current Load</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td className="well-site"><a href="#">Roys huge well</a></td>
-                        <td className="barrel-load">162 barrels</td>
-                    </tr>
-                    <tr>
-                        <td className="well-site"><a href="#">Johns well</a></td>
-                        <td className="barrel-load">2300 barrels</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <Table />
             </article>
         </section>
     )

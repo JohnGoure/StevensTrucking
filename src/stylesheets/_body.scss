@@ -16,19 +16,35 @@ body {
 }
 
 .dispatch-control h1 {
-    font-size: 40px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 table {
     font-size: 20px;
-    border: 1px solid black;
+    width: 100%;
     border-collapse: collapse;
-    margin-bottom: 50px;
 }
 
-th:nth-child(1), td {
+thead {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    overflow: auto;
+}
+
+tbody {
+    display: block;
+    width: 100%;
+    height: 250px;
+    overflow: auto;
+}
+
+th, td {
+    width: 200px;
     text-align: left;
-    padding: 15px;
+    padding: .5em 1em;
+    vertical-align: top;
 }
 
 a {
@@ -38,4 +54,39 @@ a {
 
 a:hover {
  color: blue;
+}
+
+.odd-row {
+ background-color: white;
+}
+
+@media (min-width: 600px) {
+    .dispatch-control h1 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    table {
+        width: 800px;
+    }
+
+    th, td {
+        width: 400px;
+    }
+}
+
+@media (min-width: 800px) {
+
+    .dispatch-control h1 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    table {
+        width: 800px;
+    }
+
+    th, td {
+        width: 400px;
+    }
 }
