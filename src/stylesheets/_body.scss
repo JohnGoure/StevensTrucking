@@ -67,11 +67,11 @@ a:hover {
     }
 
     table {
-        width: 800px;
+        width: 500px;
     }
 
     th, td {
-        width: 400px;
+        width: 250px;
     }
 }
 
@@ -83,7 +83,22 @@ a:hover {
     }
 
     table {
-        width: 800px;
+        width:700px;
+    }
+
+    th, td {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dispatch-control h1 {
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    table {
+        width:800px;
     }
 
     th, td {
