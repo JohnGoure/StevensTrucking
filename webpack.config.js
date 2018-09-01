@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.join(__dirname, "dist")
+        path: path.join(__dirname, "dist"),
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -41,6 +42,9 @@ module.exports = {
                 ]
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins: [
         new CleanWebpackPlugin(["dist"]),

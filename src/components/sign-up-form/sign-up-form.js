@@ -46,19 +46,13 @@ class SignUpForm extends Component {
     render() {
         return (
             <section className="generic-sign-up">
-                <h1>Sign Up</h1>
+                <h1>Create Account</h1>
                 <form className="sign-up-form">
                     <label htmlFor="email">
                         Email:
                     </label>
                     <input id="email" type="email" name="email" value={this.state.email} placeholder="Email" onChange={this.handleEmail} required/>
                     <span id="email-error"></span>
-
-                    <label htmlFor="email-confirmation">
-                        Email Confirmation:
-                    </label>
-                    <input id="email-confirmation" type="email" name="email-confirmation" placeholder="Email" required/>
-                    <span id="email-confirmation-error"></span>
 
                     <label htmlFor="password">
                         Password:
@@ -67,12 +61,12 @@ class SignUpForm extends Component {
                     <span id="password-error"></span>
 
                     <label htmlFor="password-confirmation">
-                        Password Confirmation:
+                        Confirm Password:
                     </label>
                     <input id="password-confirmation" type="password" name="password-confirmation" placeholder="Password" minLength="8"/>
                     <span id="password-confirmation-error"></span>
 
-                    <input type="submit" value="sumbit" onClick={this.handleSubmit}/>
+                    <button type="submit" value="sumbit" onClick={this.handleSubmit}>Submit</button>
                 </form>
         </section>
         )

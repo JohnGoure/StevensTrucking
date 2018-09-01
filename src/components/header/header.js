@@ -20,7 +20,7 @@ class Header extends Component {
     render() {
         return (
             <header className="header">
-                <a id="logo" href="#"><img src={img} alt="logo"></img></a>
+                <a id="logo" href="/"><img src={img} alt="logo"></img></a>
                 <div className="container">
                     <div id="nav-icon1" onClick={this.clicked}>
                         <span></span>
@@ -32,8 +32,8 @@ class Header extends Component {
                 <div className="drop-down-content">
                 <nav>
                     <ul>
-                        <li><div id="login"><a href="#">Login</a></div></li>
-                        <li><div id="create-account"><a href="#">Create Account</a></div></li> 
+                        <li><div id="login"><a href="/login">Login</a></div></li>
+                        <li><div id="create-account"><a href="/create">Create Account</a></div></li> 
                     </ul>
                 </nav>
             </div> :

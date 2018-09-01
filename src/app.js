@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Body from './components/body/body';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import SignUp from './components/sign-up-form/sign-up-form';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import './stylesheets/style.scss'
 
 class App extends Component {
@@ -18,42 +20,6 @@ class App extends Component {
         this.setSearchTerm = this.setSearchTerm.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
     }
-
-    /*componentDidMount() {
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=PEkbSommBLV3LGIE6TLStkoAjh0bGnvU&s=fortnite', {
-                    mode: 'cors'
-                })
-                .then((res) => {
-                    return res.json()
-                }).then((res) => {
-                    console.log(res);
-                    this.setState({
-                        imgURL: res.data.images.original.url,
-                        title: res.data.title,
-                        searchTerm: '',
-                        apiURL: 'https://api.giphy.com/v1/gifs/translate?api_key=PEkbSommBLV3LGIE6TLStkoAjh0bGnvU&s='
-                    })
-                }).catch((err) => {
-                console.log(err);
-                });
-    }
-
-    handleClick(e) {
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=PEkbSommBLV3LGIE6TLStkoAjh0bGnvU&s=fortnite', {
-                    mode: 'cors'
-                })
-                .then((res) => {
-                    return res.json()
-                }).then((res) => {
-                    console.log(res);
-                    this.setState({
-                        imgURL: res.data.images.original.url,
-                        title: res.data.title
-                    })
-                }).catch((err) => {
-                console.log(err);
-                });
-    }*/
 
     setSearchTerm(e) {
         this.setState({
@@ -91,7 +57,12 @@ class App extends Component {
         return(
             <div>
                 <Header />
-                <Body imgURL={this.state.imgURL} title={this.state.title} search={this.handleSearch} handleChange={this.setSearchTerm} searchTerm={this.state.searchTerm} error={this.state.error}/>
+                <Router>
+                    <div>
+                    <Route exact={true} path="/" component={Body} />
+                    <Route path="/create" component={SignUp} />
+                    </div>
+                </Router>
                 <Footer />
             </div>
         )

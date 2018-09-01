@@ -2,13 +2,42 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    margin: 20px;
 }
 
 .sign-up-form {
     display: flex;
     flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    padding: 5px 20px 0px 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
 }
 
 .sign-up-form input {
-    width: 70%;
+    width: 80%;
+    margin-bottom : 10px;
+}
+.sign-up-form label {
+    padding: 0px 0px 5px 0px;
+}
+
+.sign-up-form button {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    .generic-sign-up h1 {
+        font-weight: bold;
+        font-size: 40px;
+    }
+    .sign-up-form {
+        width: 200px;
+        height: 300px;
+        font-size: 20px;
+    }
 }
