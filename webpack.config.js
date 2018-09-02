@@ -9,8 +9,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.join(__dirname, "dist"),
-        publicPath: '/'
+        path: path.join(__dirname, "dist")
     },
     module: {
         rules: [

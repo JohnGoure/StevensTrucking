@@ -6,17 +6,36 @@ body {
     line-height: 1.5;
 }
 
+.body-background {
+    background-color: #f1f1f1;
+    padding: 1rem;
+}
+
 .dispatch-control {
     display: flex;
     background-color: #f1f1f1;
     flex-flow: column wrap;
     align-items: center;
-    height: 500px;
+    height: 600px;
 }
 
 .dispatch-control h1 {
     font-weight: bold;
     font-size: 30px;
+    letter-spacing: 7px;
+}
+
+.card, .card1 {
+    text-align: center;
+    background: #fff;
+    border-radius: 2px;
+    margin: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card1:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 table {
@@ -27,6 +46,7 @@ table {
 
 thead {
     font-weight: bold;
+    letter-spacing: 2px;
     display: block;
     width: 100%;
     overflow: auto;
@@ -35,7 +55,7 @@ thead {
 tbody {
     display: block;
     width: 100%;
-    height: 250px;
+    height: 400px;
     overflow: auto;
 }
 
@@ -53,11 +73,10 @@ a {
 
 a:hover {
  color: blue;
- text-decoration: underline;
 }
 
 .odd-row {
- background-color: white;
+ background-color: #f1f1f1;
 }
 
 @media (min-width: 600px) {
@@ -76,7 +95,6 @@ a:hover {
 }
 
 @media (min-width: 800px) {
-
     .dispatch-control h1 {
         font-weight: bold;
         font-size: 30px;
@@ -91,7 +109,15 @@ a:hover {
     }
 }
 
+@media(min-height: 800px) {
+
+    .dispatch-control {
+        height: 700px;
+    }
+}
+
 @media (min-width: 1200px) {
+
     .dispatch-control h1 {
         font-weight: bold;
         font-size: 40px;
