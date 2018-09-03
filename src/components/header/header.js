@@ -9,16 +9,32 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggle: false
+            toggle: false,
+            navOpen: false,
+            navStyle: {
+                height: "0px"
+            }
         }
         this.clicked = this.clicked.bind(this);
     }
 
     clicked(e) {
-        console.log(this.state.toggle)
         this.setState({
-            toggle: !this.state.toggle
+            navOpen: !this.state.navOpen
         })
+        if (this.state.navOpen) {
+            this.setState({
+                navStyle: {
+                    height: "200px"
+                }
+            })
+        } else if (!this.state.navOpen){
+            this.setState({
+                navStyle: {
+                    height: "0px"
+                }
+            })
+        }
     }
 
     render() {
@@ -40,9 +56,8 @@ class Header extends Component {
                         <span></span>
                         <span></span>
                     </div>
-                </div>
-                { this.state.toggle ? 
-                <div className="drop-down-content">
+                </div> 
+                {this.state.navOpen ? <div className="drop-down-content">
                 <Router>
                 <nav>
                     <ul>
@@ -51,9 +66,9 @@ class Header extends Component {
                     </ul>
                 </nav>
                 </Router>
-            </div> :
-            ""}
-                </div>
+                </div> : ""}
+                
+            </div>
             </header>
         )
     }

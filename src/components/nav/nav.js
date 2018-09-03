@@ -1,8 +1,21 @@
 import React from 'react';
 
-const nav = () => {
+const nav = (props) => {
+
+    const navStyle = {}
+
+    if (props.open) {
+        navStyle = {
+            height: "20px"
+        }
+    } else {
+        navStyle = {
+            height: "0px"
+        }
+    }
+
     return (
-        <nav>
+        <nav style={navStyle}>
                 <ul className="hidden">
                     <li>
                         <a href="login">Login</a>
